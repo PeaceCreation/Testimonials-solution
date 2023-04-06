@@ -1,0 +1,325 @@
+
+/*  Start  Global Rules */
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+.container{
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    /* margin-left:auto; */
+}
+ul{
+    list-style: none;
+}
+body{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     background-color:#edf2f8;
+}
+/*  End Global Rules */
+
+/*  Start Main  */
+main{
+     margin: 60px auto;
+     padding:20px;
+}
+main .content{
+     display: grid;
+     gap:20px;
+     grid-template-columns: repeat(4, 1fr);
+     grid-auto-rows: minmax(150px, auto); 
+     margin:40px auto;
+}
+@media(max-width:767px){
+     main .content{
+          grid-template-areas:
+          "daniel daniel daniel daniel"
+          "john john john john"
+          "jenet jenet jenet jenet"
+          "kira kira kira kira"
+          "patrick patrick patrick patrick"
+     }
+}
+main .daniel{
+     background-color: #733fc8;
+     grid-column: 1/3;
+     grid-row: 1/2;
+     border-radius: 12px;
+     position:relative; 
+}
+@media(max-width:767px){
+     main .daniel{
+          grid-area: daniel;
+     }
+}
+main .daniel::before{
+     position: absolute;
+     content: "";
+     width: 121px;
+     height: 109px;
+     right: 175px;
+     top: 37px;
+     background-image: url(../images/bg-pattern-quotation.svg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     z-index: 1;
+}
+main .daniel .profile{
+     display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:25px;
+}
+main .daniel .profile span{
+     width:50px;
+}
+main .daniel .profile  span img{
+     width: 40px;
+     border-radius: 50%;
+}
+main .daniel .profile .name h4{
+     color: #fff;
+     padding: 4px 0;
+}
+main .daniel .profile .name p{
+     color:#fff;
+     font-size:13px;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+}
+main .daniel .contents{
+     margin:25px;
+     position: relative;
+     z-index: 2;
+
+}
+main .daniel .contents .big{
+     color:#fff;
+     font-size:22px;
+     padding:10px 0;
+}
+main .daniel .contents p{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     color:hsl(0, 0%, 81%);
+     line-height: 1.4;
+}
+main .john{
+     background-color:#49556b;
+     grid-column: 3/4;
+     grid-row: 1/2;
+     border-radius:13px;
+
+}
+@media(max-width:767px){
+     main .john{
+          grid-area: john;
+     }
+}
+main .john .profile{
+     display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:25px;
+}
+
+main .john .profile span{
+     width:50px;
+}
+main .john .profile  span img{
+     width: 40px;
+     border-radius: 50%;
+}
+main .john .profile .name h4{
+     color: #fff;
+     padding: 4px 0;
+}
+main .john .profile .name p{
+     color:#fff;
+     font-size:13px;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+}
+main .john .contents{
+     margin:25px;
+
+}
+main .john .contents .big{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     color:#fff;
+     font-size:22px;
+     padding:10px 0;
+}
+main .john .contents p{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     color:hsl(0, 0%, 81%);
+     line-height: 1.4;
+}
+
+main .jenet{
+     background-color: #fff;
+     border-radius:13px;
+
+}
+@media(max-width:767px){
+     main .jenet{
+          grid-area: jenet;
+     }
+}
+
+main .jenet .profile{
+     display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:25px;
+}
+
+main .jenet .profile span{
+     width:50px;
+}
+main .jenet .profile  span img{
+     width: 40px;
+     border-radius: 50%;
+}
+main .jenet .profile .name h4{
+     padding: 4px 0;
+}
+main .jenet .profile .name p{
+     font-size:13px;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+}
+main .jenet .contents{
+     margin:25px;
+
+}
+main .jenet .contents .big{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     font-size:22px;
+     padding:10px 0;
+     color:#000;
+}
+main .jenet .contents p{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     color:hsl(0deg 2.2% 9.25% / 64%);
+     line-height: 1.4;
+}
+
+main .Patrick{
+     background-color:#18202d;
+     grid-column:2/4;
+     border-radius:13px;
+
+}
+
+@media(max-width:767px){
+     main  .Patrick{
+          grid-area: patrick;
+     }
+}
+main .Patrick .profile{
+     display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:25px;
+}
+
+main .Patrick .profile span{
+     width:50px;
+}
+main .Patrick .profile  span img{
+     width: 40px;
+     border-radius: 50%;
+}
+main .Patrick .profile .name h4{
+     padding: 4px 0;
+     color:#fff;
+}
+main .Patrick .profile .name p{
+     font-size:13px;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     color:#fff;
+}
+main .Patrick .contents{
+     margin:25px;
+
+}
+main .Patrick .contents .big{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     font-size:22px;
+     padding:10px 0;
+     color:#fff;
+}
+main .Patrick .contents p{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     color:hsl(0, 0%, 81%);
+     line-height: 1.4;
+}
+main .kira{
+     background-color: #fff;
+     grid-column: 4/5;
+     grid-row: 1/3;
+     border-radius:13px;
+}
+@media(max-width:767px){
+     main .kira{
+          grid-area: kira;
+     }
+}
+main .kira .profile{
+     display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:25px;
+}
+
+main .kira .profile span{
+     width:50px;
+}
+main .kira .profile  span img{
+     width: 40px;
+     border-radius: 50%;
+}
+main .kira .profile .name h4{
+     padding: 4px 0;
+     color:#000;
+}
+main .kira .profile .name p{
+     font-size:13px;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+}
+main .kira .contents{
+     padding:26px;
+}
+main .kira .contents .big{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     font-size:22px;
+     padding:10px 0;
+     color:#000;
+}
+main .kira .contents p{
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     color:hsl(0deg 2.2% 9.25% / 64%);
+     line-height: 1.4;
+}
+
+
+/*  Start Main  */
+
+/*  Start Queries */
+    @media(min-width:768px){
+         .container{
+              max-width:720px;
+         }
+    }
+
+    @media(min-width:992px){
+         .container{
+              max-width:960px;
+         }
+    }
+
+    @media(min-width:1440px){
+         .comtainer{
+              max-width:1400px;
+         }
+    }
+/*  End  Queries */
